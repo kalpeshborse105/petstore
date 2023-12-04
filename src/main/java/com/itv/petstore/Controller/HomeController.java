@@ -10,4 +10,9 @@ public class HomeController {
     {
         return "My Name is Kalpesh";
     }
+    @RequestMapping("/score")
+    public int getscore()
+    {
+        return 90;
+    }
 }
