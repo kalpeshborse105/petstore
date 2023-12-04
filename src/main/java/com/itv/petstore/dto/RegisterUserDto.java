@@ -1,5 +1,7 @@
 package com.itv.petstore.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -25,5 +27,10 @@ public class RegisterUserDto {
     private String confirmpassword;
 
     @NotNull @NotEmpty
+    @com.itv.petstore.validators.mobile
     private String mobile;
+    @Min (value=10000,message="minimum salary should be 10000")
+    @Max (value=10000,message="minimum salary should be 10000")
+    private long salary;
+
 }
